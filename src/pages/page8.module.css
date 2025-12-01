@@ -1,0 +1,137 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  background: #FFFDFC;
+  position: relative;
+  overflow: hidden;
+}
+
+.statusBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 412px;
+  height: 32px;
+  padding: 4px 8px;
+  background: #999999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 12px;
+  font-family: Roboto;
+  font-weight: 500;
+  z-index: 20;
+}
+
+.content {
+  flex: 1;
+  padding: 56px 20px 100px;
+  overflow-y: auto;
+}
+
+.content h1 {
+  color: #573C0D;
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0 0 24px 0;
+  line-height: 36.4px;
+}
+
+.songList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.songCard {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 12px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  transition: all 0.2s ease;
+}
+
+.songCard:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.songThumb {
+  width: 60px;
+  height: 60px;
+  background: #D9D9D9;
+  border-radius: 8px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.songInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.songTitle {
+  color: #573C0D;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.songArtist {
+  color: #999999;
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.songOption {
+  color: #999999;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+.navbar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 70px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  border-top: 1px solid #E5E5E5;
+}
+
+.navItem {
+  flex: 1;
+  height: 58.5px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  color: #999999;
+  font-size: 10px;
+  font-family: Pretendard;
+  font-weight: 400;
+}
+
+.navItem span {
+  font-size: 20px;
+}
+

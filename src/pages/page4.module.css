@@ -1,0 +1,229 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  background: #FFFDFC;
+  position: relative;
+  overflow: hidden;
+}
+
+.statusBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 412px;
+  height: 32px;
+  padding: 4px 8px;
+  background: #999999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 12px;
+  font-family: Roboto;
+  font-weight: 500;
+  z-index: 20;
+}
+
+.content {
+  flex: 1;
+  padding: 56px 20px 100px;
+  overflow-y: auto;
+}
+
+.content h1 {
+  color: #573C0D;
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  line-height: 36.4px;
+}
+
+.content p {
+  color: #7A5838;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  line-height: 25.6px;
+}
+
+.moodTags {
+  display: flex;
+  gap: 21px;
+  margin: 20px 0;
+  overflow-x: auto;
+  padding: 10px 0;
+}
+
+.tag {
+  padding: 8px 16px;
+  background: white;
+  color: #573C0D;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 100px;
+  border: 1px solid #E5E5E5;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.playlistCard {
+  width: 360px;
+  height: 398px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+  padding: 23px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 37px;
+  align-items: center;
+  margin: 20px auto;
+}
+
+.playlistCard img {
+  width: 295px;
+  height: 166px;
+  border-radius: 24px;
+  object-fit: cover;
+}
+
+.playlistTitle {
+  color: #7A5838;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+  text-align: center;
+}
+
+.navbar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 70px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  border-top: 1px solid #E5E5E5;
+}
+
+.navItem {
+  flex: 1;
+  height: 58.5px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  color: #999999;
+  font-size: 10px;
+  font-family: Pretendard;
+  font-weight: 400;
+}
+
+.navItem span {
+  font-size: 20px;
+}
+
+/* --- Added Styles --- */
+
+.weatherButtons {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.weatherButton {
+  padding: 8px 16px;
+  background: white;
+  color: #573C0D;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 100px;
+  border: 1px solid #E5E5E5;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.weatherButton:hover {
+  background: #f0ebe5;
+}
+
+.weatherButton.active {
+  background: #573C0D;
+  color: white;
+  border-color: #573C0D;
+}
+
+.musicListContainer {
+  margin-top: 20px;
+}
+
+.errorText {
+  color: #D93025;
+  font-weight: 500;
+}
+
+.musicGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.musicCard {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s;
+}
+
+.musicCard:hover {
+  transform: translateY(-5px);
+}
+
+.thumbnail {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.musicInfo {
+  padding: 10px;
+  flex-grow: 1;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 5px 0;
+  /* Clamp text to 2 lines */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.channel {
+  font-size: 12px;
+  color: #666;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

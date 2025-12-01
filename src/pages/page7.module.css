@@ -1,0 +1,175 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  background: #FFFDFC;
+  position: relative;
+  overflow: hidden;
+}
+
+.statusBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 412px;
+  height: 32px;
+  padding: 4px 8px;
+  background: #999999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 12px;
+  font-family: Roboto;
+  font-weight: 500;
+  z-index: 20;
+}
+
+.content {
+  flex: 1;
+  padding: 56px 20px 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.playerCard {
+  background: white;
+  border-radius: 20px;
+  padding: 24px;
+  width: 100%;
+  max-width: 360px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.albumArtSmall {
+  width: 160px;
+  height: 160px;
+  border-radius: 16px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.trackDetails {
+  text-align: center;
+  width: 100%;
+}
+
+.songTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #573C0D;
+  margin: 0 0 4px 0;
+}
+
+.songArtist {
+  font-size: 14px;
+  color: #999999;
+  margin: 0;
+}
+
+.controlsContainer {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  max-width: 360px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.controlBtn {
+  flex: 1;
+  min-width: 80px;
+  padding: 12px 16px;
+  border: 1px solid #E5E5E5;
+  background: white;
+  border-radius: 12px;
+  color: #573C0D;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.2s ease;
+}
+
+.controlBtn:hover {
+  background: #f5f5f5;
+  border-color: #999999;
+}
+
+.icon {
+  font-size: 18px;
+}
+
+.playBtn {
+  flex: 1;
+  min-width: 100px;
+  padding: 14px 20px;
+  background: #A67F59;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(166, 127, 89, 0.3);
+}
+
+.playBtn:hover {
+  background: #8f6b4a;
+  box-shadow: 0 4px 12px rgba(166, 127, 89, 0.4);
+}
+
+.playBtn.playing {
+  background: #7a5838;
+}
+
+.progressContainer {
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.progressTime {
+  font-size: 12px;
+  color: #999999;
+  font-weight: 500;
+  min-width: 30px;
+}
+
+.progressBar {
+  flex: 1;
+  height: 4px;
+  background: #E5E5E5;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progressFill {
+  width: 33%;
+  height: 100%;
+  background: #A67F59;
+  border-radius: 2px;
+}
+
